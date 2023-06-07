@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+			font-size: larger;
+		}
+
+		.navMenu a {
+			color: #2c3e50;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 10px;
+		}
+
+		.background {
+			background-color: #943194;
+		}
+
+		.border {
+			border: 2px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+			color: #aed0eb;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="me" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-face-meh-blank"></i> About me</a>
+		<a id="research" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-lightbulb"></i> Research</a>
+		<a id="publication" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-paper-plane"></i> Publication</a>
+		<a id="CV" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> CV</a>
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://zoe-cheng-researcher.notion.site/Tzu-Han-Zoe-Cheng-d9ebbd6e7d364b4a8743251c6801541d?pvs=4", '_blank').focus();
+			else if (id == "me")
+				window.open("https://zoe-cheng-researcher.notion.site/About-me-bcb9d96d0ad54b4a80e4dab07b303f50?pvs=4", '_blank').focus();
+			else if (id == "research")
+				window.open("https://zoe-cheng-researcher.notion.site/Research-ae7c6cda98e94477af20ad80af4f0f40?pvs=4", '_blank').focus();
+			else if (id == "publication")
+				window.open("https://zoe-cheng-researcher.notion.site/Publications-66b5d2c46acc4a79b52916150cc9a617?pvs=4", '_blank').focus();
+			else if (id == "CV")
+				window.open("https://zoe-cheng-researcher.notion.site/CV-1a2a59382dff4f48a44ba0fad5e30ef9?pvs=4", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
