@@ -75,6 +75,11 @@
       background-color: #0e76a8;
     }
     
+    .github:hover,
+    .github::after {
+      background-color: #ffbd2f;
+    }
+    
     .social {
       position: relative;
       margin: 10px;
@@ -109,11 +114,13 @@
       <!-- End linkedin Icon -->
 
 
-
+      <!-- Start github Icon -->
+      <div id="github" onclick="navigate(this.id)" class="fill  github">
+        <span class="icon"><i class="fa-brands fa-github"></i></span>
+      </div>
+      <!-- End github Icon -->
 
     </div>
-
-
 
 
     <script>
@@ -125,7 +132,10 @@
           window.open("mailto:tzcheng@ucsd.edu", '_blank').focus(); //Add your email after "mailto:""
         }
         else if (id === "linkedin") {
-          window.open("https://www.linkedin.com/in/tzu-han-zoe-cheng-3a33b91a6/", '_blank').focus(); //Add the url to your pinterest account
+          window.open("https://www.linkedin.com/in/tzu-han-zoe-cheng-3a33b91a6/", '_blank').focus(); //Add the url to your linkedin account
+        }
+        else if (id === "github") {
+          window.open("https://github.com/tzcheng911", '_blank').focus(); //Add the url to your github account
         }
       }
 
