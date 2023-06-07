@@ -80,6 +80,16 @@
       background-color: #ffbd2f;
     }
     
+    .webofscience:hover,
+    .webofscience::after {
+      background-color: #23c8c8;
+    }
+    
+    .gscholar:hover,
+    .gscholar::after {
+      background-color: #23c8c8;
+    }
+    
     .social {
       position: relative;
       margin: 10px;
@@ -119,6 +129,20 @@
         <span class="icon"><i class="fa-brands fa-github-square"></i></span>
       </div>
       <!-- End github Icon -->
+      
+      
+      <!-- Start webofscience Icon -->
+      <div id="webofscience" onclick="navigate(this.id)" class="fill  webofscience">
+        <span class="icon"><i class="fa-solid fa-circle-nodes"></i></span>
+      </div>
+      <!-- End webofscience Icon -->
+    
+      
+      <!-- Start gscholar Icon -->
+      <div id="gscholar" onclick="navigate(this.id)" class="fill  gscholar">
+        <span class="icon"><i class="fa-solid fa-graduation-cap"></i></span>
+      </div>
+      <!-- End gscholar Icon -->
 
     </div>
 
@@ -136,6 +160,12 @@
         }
         else if (id === "github") {
           window.open("https://github.com/tzcheng911", '_blank').focus(); //Add the url to your github account
+        }
+        else if (id === "webofscience") {
+          window.open("https://www.webofscience.com/wos/author/record/IAM-1798-2023", '_blank').focus(); //Add the url to your webofscience account
+        }
+        else if (id === "gscholar") {
+          window.open("https://scholar.google.com/citations?user=IGFQ3e0AAAAJ&hl=en", '_blank').focus(); //Add the url to your webofscience account
         }
       }
 
