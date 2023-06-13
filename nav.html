@@ -15,50 +15,44 @@
 	<!-------->
 
 	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-		}
+	.navbar {
+	font-family: 'Advent Pro', sans-serif;
+	width: 100%;
+	overflow: auto;
+	}
 
+	.navbar a {
+	color: #2c3e50;
+	float: left;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 17px;
+	background-color:#e8eced;
+	}
 
-		.navMenu {
-			font-family: 'Advent Pro', sans-serif;
-			padding: 8px;
-			text-align: center;
-			margin: 7px auto;
-			width: fit-content;
-			font-size: larger;
-		}
+	.background {
+    	background-color: #943194;
+	}
 
-		.navMenu a {
-			color: #2c3e50;
-			text-decoration: none;
-			text-transform: uppercase;
-			display: inline-flexbox;
-			padding: 15px;
-			background-color: #e8eced;
-		}
+	.navbar a:hover {
+	color: #aed0eb;
+	}
 
-		.background {
-			background-color: #943194;
-		}
+	.active {
+	background-color: #04AA6D;
+	}
 
-		.border {
-			border: 0px solid #cccccc;
-
-		}
-
-		.navMenu a:hover {
-			color: #aed0eb;
-		}
+	@media screen and (max-width: 500px) {
+	.navbar a {
+		float: none;
+		display: block;}
+	}
 	</style>
 </head>
 
 <body>
 
-	<nav class="navMenu  border">
+	<nav class="navbar">
 		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
 		<a id="me" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-face-meh-blank"></i> About me</a>
 		<a id="research" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-lightbulb"></i> Research</a>
